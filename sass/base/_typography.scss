@@ -1,0 +1,103 @@
+body {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    background-color: $color-primary;
+    color:$color-font-primary;
+}
+
+.heading-secondary{
+    font-size: 3rem;
+    font-weight: 400;
+    color:$color-font-tertiary;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    text-transform: uppercase;
+
+    // position: relative;
+
+    // &::after{
+    //     content: "";
+    //     display: block;
+    //     height:1.5px;
+    //     background-color: $color-font-primary;
+    //     width: 45%;
+    //     position: absolute;
+    //     top:45%;
+    //     left: 15%;
+        
+    // }
+    
+    
+}
+
+.about-link{
+    color: $color-font-tertiary;
+    background-color: $color-primary;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+    transition: all .3s linear;
+
+    &::before{
+        content: "";
+        height: 100%;
+        width:0;
+        background-color: $color-heading-secondary;
+        position: absolute;
+        top:0;
+        left:0;
+        transition: all .6s;
+        z-index: -1;
+        
+    }
+    &:hover{
+        color: $color-font-primary;
+        transform: translateY(-4px);
+    }
+    
+    &:active{
+        transform: translateY(-1px);
+    }
+    &:hover {
+        
+         &::before{
+            opacity: .8;
+            width: 100%;
+        }
+    }
+}
+
+.heading-primary{
+    font-size: 3.4rem;
+    font-weight: 400;
+    color: $color-font-tertiary;
+
+    @include respond(tab-port){
+        font-size: 3rem;
+    }
+
+    @include respond(phone){
+        font-size: 2.5rem;
+    }
+}
+
+.big-font{
+    font-size: 3.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $color-heading-secondary;
+    margin-bottom: .6rem;
+}
+
+.info-paragraph{
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: justify;
+    line-height: 1.4;
+    color: $color-font;
+}

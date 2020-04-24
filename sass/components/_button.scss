@@ -1,0 +1,66 @@
+/*rgb(230, 241, 255);*/
+
+.btn{
+    width: 21rem;
+    height: 5rem;
+    padding: 1.5rem 0;
+    // padding:  .8rem 4.4rem 4.3rem 4.4rem;
+    display: inline-block;
+    text-transform: uppercase;
+    margin-top: 10rem;
+    color: #fff;
+    font-size: 1.6rem;
+    text-decoration: none;
+    transform:  translateY(-4px);
+    border-radius: 25px;
+    background-color: transparent;
+    border: 2px solid $color-btn-primary;
+    position: relative;
+    overflow: hidden;
+    z-index: 9999;
+    text-align: center;
+
+    @include respond(tab-port){
+        margin-top: 8rem;
+    }
+
+    @include respond(phone){
+        margin-top: 7rem;
+    }
+
+    
+    &::before{
+        content: "";
+        width: 25rem;
+        height: 20rem;
+        border-radius: 40%;
+        background-color: #f4d984;
+        position: absolute;
+        top: 160%;
+        left: -20%;
+        transition: all .8s linear;
+        animation: rotate 8s linear infinite;
+        z-index: -1;
+    
+        
+    }
+    
+    &:hover {
+
+        &::before{ 
+           top: 60%;
+           cursor: pointer;
+        }
+    }
+    
+    
+    &:active{
+        transform:  translateY(-1px);
+    }
+    
+    &:hover{
+        box-shadow: .2rem 1rem 4rem $color-box-shadow;
+        
+    }
+}
+

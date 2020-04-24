@@ -1,0 +1,13 @@
+.progress-bar{
+    height: 5px;
+    width: 0;
+    box-shadow: 0 2rem 3rem $color-heading-secondary inset;
+
+    &-container{
+        position: fixed;
+        top:0;
+        left:0;
+        right:0;
+        z-index: 1000;
+    }
+}

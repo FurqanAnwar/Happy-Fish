@@ -1,0 +1,62 @@
+.header {
+    
+    height: 95vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    &__logo {
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        font-size: 1.8rem;
+        color: $color-font-primary;
+
+        @include respond(phone){
+            font-size: 1.4rem;
+        }
+
+        &--1 {
+            background-color: rgba(255, 55, 0, 0.8);
+            padding: 1.4rem 1rem;
+            display: inline-block;
+            transform: translate3d(0.25rem, 20%, 0) skewY(-10deg);
+        }
+        
+        &--2 {
+            background-color: rgba(20, 181, 184, 0.8);
+            padding: 1.4rem 1.6rem;
+            display: inline-block;
+            transform: translate3d(-0.9rem, 20%, 0) skewY(-10deg);
+        }
+    
+    }
+    
+    
+    &__heading {
+        font-size: 2.4rem;
+        font-weight: 900;
+        letter-spacing: 1px;
+        word-spacing: 2px;
+        text-transform: uppercase;
+        color: $color-font-primary;
+        text-align: center;
+
+        @include respond(phone){
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        &-primary {
+            margin-bottom: .6rem;
+        
+        
+        }
+    }
+    
+    
+    
+}
+
